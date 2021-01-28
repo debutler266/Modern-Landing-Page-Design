@@ -14,3 +14,78 @@ img {
   max-width: 100%;
   display: block;
 }
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+.container {
+  width: 85%;
+  max-width: 65em;
+  margin: 0 auto;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: .5em 1.25em;
+  background: blue;
+  color: var(--clr-text, #ffffff);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.125rem;
+  border-radius: .25em;
+  background: var(--clr-accent, blue);
+  transition: transform 250ms ease-in-out,
+  opacity 250ms linear;
+}
+
+.btn:hover,
+.btn:focus {
+  transform: scale(1.1);
+  opacity: .9;
+}
+
+.primary-title {
+font-size: 4rem;
+font-size: clamp(3rem, calc(5wv + 1rem), 4.5rem); /*Title size adjusted accordingly on different sized devices using clamp */
+line-height: 1; /* Should be 1.1 if text-transform is non set to uppercase */
+text-transform: uppercase;
+}
+
+.hero {
+  color: #ffffff;
+  text-align: center;
+  padding: 15em 0;
+  background: #222;
+  background: url("img/shoe3.png"),
+  radial-gradient(#444, #111);
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* background-size: 10%; */ /* cool design to use potentially on another project */
+}
+
+
+
+
+
+
+
+
+
+
+
+/* For browswers that DO NOT support background-blend
+@supports (background-blend-mode: multiply) {
+  .hero {
+    background: url("img/shoe3.png"),
+    radial-gradient(#444, #111);
+    background-blend-mode: multiply;
+  }
+}
+
+*/
