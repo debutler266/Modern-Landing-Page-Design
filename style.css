@@ -15,6 +15,10 @@ img {
   display: block;
 }
 
+section {
+  padding: 7em 0;
+}
+
 h1,
 h2,
 h3,
@@ -26,6 +30,21 @@ p {
   width: 85%;
   max-width: 65em;
   margin: 0 auto;
+}
+
+.split {
+  display: flex;
+  gap: 2em;
+  justify-content: center;
+ /* items will stack if there is not enough room/smaller screen size */
+}
+
+.split>* {
+  flex-basis: 30%;
+}
+
+.spacing>*+* { /* any element that comes after another sibling,  will be the direct child/ get spacing */
+  margin-top: var(--spacer, 2rem)
 }
 
 .btn {
@@ -66,17 +85,63 @@ text-transform: uppercase;
   background-blend-mode: multiply;
   background-repeat: no-repeat;
   background-position: center;
+  background-attachment: fixed; /* Parallax effect without actually using parallax.
   /* background-size: 10%; */ /* cool design to use potentially on another project */
+}
+
+.section-title {
+  text-align: center;
+  font-size: clamp(2.5rem, calc(5vw + 1rem), 4rem);
+  line-height: 1;
+  color: #111;
+  margin-bottom: 5rem;
+}
+
+.featured {
+background: #eee;
+}
+
+.featured__item {
+  position: relative;
+  transform: scale(.85);
+  transition: transform 250ms ease-in-out;
+  text-decoration: none;
+  color: #111;
+  text-align: center;
+  line-height: 1.2;
+}
+
+span {
+  display: block;
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-top: 10px;
+}
+
+.featured__item:hover,
+.featured__item:focus {
+  transform: scale(1);
 }
 
 
 
+.featured__item::after {
+  content: '';
+  position: absolute;
+  top: -10%;
+  left: 3%;
+  bottom: -10%;
+  z-index: -1; /* Puts circles behind shoes/item */
+  padding: 100% 100% 0 0; /* Padding or Margins at 100% are based soley of the width of the parent element.*/
+  border-radius: 50%;
+  background: #2193b0;
+}
 
-
-
-
-
-
+@media (max-width: 425px) {
+  .split {
+    display: inline-block;
+  }
+}
 
 
 /* For browswers that DO NOT support background-blend
