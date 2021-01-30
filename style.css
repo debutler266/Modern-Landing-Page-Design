@@ -143,6 +143,39 @@ span {
   }
 }
 
+.product {
+  background: radial-gradient(var(--clr-inner, limegreen), var(--clr-outer, purple)); /* If no specific colors are declared/set for each variable, it will default to the ugly LIMEGREEN+PURPLE color */
+  padding: 3em;
+  border-radius: 1em;
+  margin-bottom: 3em;
+  text-align: center;
+}
+
+.product__title {
+  font-size: 4rem;
+  line-height: 1.1;
+  color: #ffffff;
+  text-shadow: 0 0 .2em rgba(#000, 0.2);
+}
+
+.shoe-red {
+  --clr-inner: #faa700;
+  --clr-outer: #e48d00;
+  --clr-accent: #a1173c;  /*accent changes the BUTTON color in this case.... remember in .btn we declared accent color as blue default initally, if a color was not already assigned */
+}
+
+.shoe-white {
+  --clr-inner: #5e5554;
+  --clr-outer: #e0dcca;
+  --clr-accent: #383836;  /*accent changes the BUTTON color in this case.... remember in .btn we declared accent color as blue default initally, if a color was not already assigned */
+}
+
+.shoe-blue {
+  --clr-inner: #6dd5ed;
+  --clr-outer: #219eb0;
+  --clr-accent: #333;  /*accent changes the BUTTON color in this case.... remember in .btn we declared accent color as blue default initally, if a color was not already assigned */
+}
+
 
 /* For browswers that DO NOT support background-blend
 @supports (background-blend-mode: multiply) {
