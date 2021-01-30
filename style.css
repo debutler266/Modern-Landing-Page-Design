@@ -87,6 +87,7 @@ text-transform: uppercase;
   background-position: center;
   background-attachment: fixed; /* Parallax effect without actually using parallax.
   /* background-size: 10%; */ /* cool design to use potentially on another project */
+  /* --clr-accent: #333; */
 }
 
 .section-title {
@@ -137,12 +138,6 @@ span {
   background: #2193b0;
 }
 
-@media (max-width: 425px) {
-  .split {
-    display: inline-block;
-  }
-}
-
 .product {
   background: radial-gradient(var(--clr-inner, limegreen), var(--clr-outer, purple)); /* If no specific colors are declared/set for each variable, it will default to the ugly LIMEGREEN+PURPLE color */
   padding: 3em;
@@ -152,10 +147,19 @@ span {
 }
 
 .product__title {
-  font-size: 4rem;
+  font-size: 3rem;
   line-height: 1.1;
   color: #ffffff;
   text-shadow: 0 0 .2em rgba(#000, 0.2);
+  text-transform: uppercase;
+}
+
+.product__description {
+  color: #ffffff;
+}
+
+.product__image {
+  margin: -5em 0 0 0;
 }
 
 .shoe-red {
@@ -174,6 +178,22 @@ span {
   --clr-inner: #6dd5ed;
   --clr-outer: #219eb0;
   --clr-accent: #333;  /*accent changes the BUTTON color in this case.... remember in .btn we declared accent color as blue default initally, if a color was not already assigned */
+}
+
+@media (max-width: 425px) {
+  .split {
+    display: inline-block;
+  }
+}
+
+@media (min-width: 45em) {
+ .product__image {
+   float: right;
+   width: 50%;
+ }
+ .product__title {
+   margin: 0;
+ }
 }
 
 
