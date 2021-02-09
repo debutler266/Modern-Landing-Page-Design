@@ -208,7 +208,7 @@ span {
   background-blend-mode: multiply;
   background-repeat: no-repeat;
   background-position: center;
-  background-attachment: fixed;
+  background-attachment: local;
 }
 
 .featured__item::after {
