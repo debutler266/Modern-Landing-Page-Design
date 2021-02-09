@@ -180,11 +180,6 @@ span {
   --clr-accent: #333;  /*accent changes the BUTTON color in this case.... remember in .btn we declared accent color as blue default initally, if a color was not already assigned */
 }
 
-@media (max-width: 425px) {
-  .split {
-    display: inline-block;
-  }
-}
 
 @media (min-width: 45em) {
  .product__image {
@@ -196,14 +191,22 @@ span {
  }
 }
 
-
-/* For browswers that DO NOT support background-blend
-@supports (background-blend-mode: multiply) {
-  .hero {
-    background: url("img/shoe3.png"),
-    radial-gradient(#444, #111);
-    background-blend-mode: multiply;
+@media (max-width: 500px) {
+  .split {
+    display: inline-block;
   }
+  .product__image {
+    margin: -7em 0 0 0;
 }
-
-*/
+.product {
+  margin-bottom: 6em;
+}
+.hero {
+  background: url(img/shoe3smalll.png),
+  radial-gradient(#444, #111);
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+}
