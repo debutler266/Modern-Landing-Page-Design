@@ -126,7 +126,7 @@ span {
 
 
 
-.featured__item::after {
+  .featured__item::after {
   content: '';
   position: absolute;
   top: -10%;
@@ -137,6 +137,7 @@ span {
   border-radius: 50%;
   background: #2193b0;
 }
+
 
 .product {
   background: radial-gradient(var(--clr-inner, limegreen), var(--clr-outer, purple)); /* If no specific colors are declared/set for each variable, it will default to the ugly LIMEGREEN+PURPLE color */
@@ -208,5 +209,9 @@ span {
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
+}
+
+.featured__item::after {
+  background: none;
 }
 }
